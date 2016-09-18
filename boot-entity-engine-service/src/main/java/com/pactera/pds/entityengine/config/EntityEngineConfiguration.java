@@ -12,8 +12,8 @@ import org.springframework.context.annotation.Configuration;
  */
 @Configuration
 public class EntityEngineConfiguration {
-    @Bean
+    @Bean(name="defaultDS")
     public GenericDAO getProjectDao() {
-        return new GenericDAO("Project");
+        return new GenericDAO("defaultDS");
     }
 }
