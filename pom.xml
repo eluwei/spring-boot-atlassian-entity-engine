@@ -39,6 +39,16 @@
                 <artifactId>entityengine</artifactId>
                 <version>1.2.2</version>
             </dependency>
+            <dependency>
+                <groupId>com.atlassian.ofbiz</groupId>
+                <artifactId>entityengine-share</artifactId>
+                <version>1.2.2</version>
+            </dependency>
+            <dependency>
+                <groupId>com.atlassian.util.concurrent</groupId>
+                <artifactId>atlassian-util-concurrent</artifactId>
+                <version>2.6.2</version>
+            </dependency>
             <!-- mysql -->
             <dependency>
                 <groupId>mysql</groupId>

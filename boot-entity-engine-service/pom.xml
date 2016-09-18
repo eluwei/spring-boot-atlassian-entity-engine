@@ -30,5 +30,13 @@
                 </exclusion>
             </exclusions>
         </dependency>
+        <dependency>
+            <groupId>com.atlassian.ofbiz</groupId>
+            <artifactId>entityengine-share</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.atlassian.util.concurrent</groupId>
+            <artifactId>atlassian-util-concurrent</artifactId>
+        </dependency>
     </dependencies>
 </project>
