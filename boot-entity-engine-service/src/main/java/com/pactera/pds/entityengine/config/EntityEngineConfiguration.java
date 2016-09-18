@@ -1,6 +1,8 @@
 package com.pactera.pds.entityengine.config;
 
 import org.ofbiz.core.entity.GenericDAO;
+import org.ofbiz.core.entity.GenericDelegator;
+import org.ofbiz.core.entity.GenericEntityException;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -12,8 +14,13 @@ import org.springframework.context.annotation.Configuration;
  */
 @Configuration
 public class EntityEngineConfiguration {
-    @Bean(name="defaultDS")
+    @Bean(name = "defaultDAO")
     public GenericDAO getProjectDao() {
         return new GenericDAO("defaultDS");
+    }
+
+    @Bean(name = "defaultDelegator")
+    public GenericDelegator getDefaultDelegator() throws GenericEntityException {
+        return GenericDelegator.getGenericDelegator("default");
     }
 }
