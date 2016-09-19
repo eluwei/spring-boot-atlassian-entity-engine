@@ -22,6 +22,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>1.8</java.version>
         <project.version>1.0-SNAPSHOT</project.version>
+        <jotm.version>2.0.10</jotm.version>
     </properties>
     <repositories>
         <repository>
@@ -41,6 +42,17 @@
                 <groupId>com.pactera.pds.entity-engine</groupId>
                 <artifactId>boot-entity-engine-service</artifactId>
                 <version>${project.version}</version>
+            </dependency>
+            <!-- jotm include -->
+            <dependency>
+                <groupId>jotm</groupId>
+                <artifactId>jotm</artifactId>
+                <version>${jotm.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.glassfish.main.connectors</groupId>
+                <artifactId>javax.resource</artifactId>
+                <version>3.1.2</version>
             </dependency>
             <!-- atlassian entity engine-->
             <dependency>

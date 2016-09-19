@@ -15,9 +15,14 @@ For detailed configuration help see:
          FIXME: should use ofbiz jta? or replace with jdbc transaction manager?
 
     -->
+    <!--
    <transaction-factory class="org.ofbiz.core.entity.transaction.DumbFactory">
         <user-transaction-jndi jndi-server-name="test" jndi-name="java:comp/UserTransaction"/>
         <transaction-manager-jndi jndi-server-name="test" jndi-name="java:comp/UserTransaction"/>
+    </transaction-factory>
+   -->
+    <!-- use jotm -->
+    <transaction-factory class="org.ofbiz.core.entity.transaction.JotmFactory">
     </transaction-factory>
 
     <connection-factory class="org.ofbiz.core.entity.transaction.DBCPConnectionFactory"></connection-factory>
