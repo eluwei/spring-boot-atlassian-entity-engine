@@ -49,12 +49,12 @@ For detailed configuration help see:
                 check-fk-indices-on-start="false"
                 add-missing-on-start="true"
                 table-type="InnoDB">
-
+<!--jdbc-driver="com.mysql.jdbc.jdbc2.optional.MysqlXADataSource"-->
         <inline-jdbc jdbc-driver="com.mysql.jdbc.Driver"
                      jdbc-uri="jdbc:mysql://127.0.0.1:3306/entity_engine"
                      jdbc-username="root"
                      jdbc-password="Admin123"
-                     isolation-level="ReadUncommitted"
+                     isolation-level="ReadCommitted"
                      pool-minsize="2"
                      pool-maxsize="250"
                      time-between-eviction-runs-millis="600000"/>
