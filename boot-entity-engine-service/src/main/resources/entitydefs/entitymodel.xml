@@ -51,4 +51,11 @@
         <prim-key field="id"/>
     </entity>
 
+    <entity entity-name="Card" table-name="card" package-name="">
+        <field name="id" type="numeric"/>
+        <field name="cardId" col-name="card_id" type="long-varchar"/>
+        <field name="balance" col-name="card_balance" type="numeric"/>
+        <prim-key field="id"/>
+    </entity>
+
 </entitymodel>

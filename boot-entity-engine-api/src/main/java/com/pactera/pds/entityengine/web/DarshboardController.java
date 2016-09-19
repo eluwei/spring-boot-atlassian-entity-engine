@@ -32,19 +32,27 @@ public class DarshboardController {
     //test roll back!
     @RequestMapping("/trans")
     public Object Trans() throws GenericEntityException {
+        Map obj=new HashMap<>();
+        obj.put("id",1);
+        obj.put("cardId","card_id_001");
+        obj.put("balance", 100);
+        GenericValue g = delegator.makeValue("Card", obj);
+
         Map obj1=new HashMap<>();
         obj1.put("id",22);
         obj1.put("key","11");
         obj1.put("counter", 11);
         GenericValue g1 = delegator.makeValue("Project", obj1);
-        Map obj2=new HashMap<>();
+        Map obj2=new HashMap<>();//obj1 and obj2 are duplicate key.
         obj2.put("id",22);
         obj2.put("key","22");
         obj2.put("counter", 22);
         GenericValue g2 = delegator.makeValue("Project", obj2);
         List<GenericValue> savePoint = new ArrayList<>();
+        savePoint.add(g);
         savePoint.add(g1);
         savePoint.add(g2);
+
         delegator.storeAll(savePoint);//duplicate key, will auto rollback..
         return "aa";
     }

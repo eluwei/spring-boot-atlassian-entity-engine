@@ -5,4 +5,5 @@
     <entity-group group="otherGroup" entity="Junk"/>
     <entity-group group="default" entity="Project"/>
     <entity-group group="default" entity="SequenceValueItem"/>
+    <entity-group group="cardGroup" entity="Card"/>
 </entitygroup>
