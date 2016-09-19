@@ -21,9 +21,9 @@ public class ProjectDto {
 
     public static ProjectDto transform(GenericEntity entity) {
         ProjectDto rs = new ProjectDto();
-        rs.id = (String) entity.get("id");
+        rs.id =  entity.get("id") +"";
         rs.key = (String) entity.get("key");
-        rs.counter = (String) entity.get("counter");
+        rs.counter = entity.get("counter")+"";
         return rs;
     }
 
