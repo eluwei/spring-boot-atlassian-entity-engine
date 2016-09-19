@@ -26,9 +26,9 @@ For detailed configuration help see:
 
     <entity-group-reader name="main" loader="maincp" location="entitydefs/entitygroup.xml"/>
 
-    <field-type name="hsql" loader="maincp" location="entitydefs/fieldtypemysql.xml"/>
+    <field-type name="mysql" loader="maincp" location="entitydefs/fieldtypemysql.xml"/>
 
-    <datasource name="defaultDS" field-type-name="hsql"
+    <datasource name="defaultDS" field-type-name="mysql"
                 schema-name="PUBLIC"
                 helper-class="org.ofbiz.core.entity.GenericHelperDAO"
                 check-on-start="true"
