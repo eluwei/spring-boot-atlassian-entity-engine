@@ -10,7 +10,11 @@ For detailed configuration help see:
 <entity-config>
     <resource-loader name="maincp" class="org.ofbiz.core.config.ClasspathLoader"/>
 
-    <!-- This configures how entity engine finds the application server's transaction management -->
+    <!--
+        This configures how entity engine finds the application server's transaction management.
+         FIXME: should use ofbiz jta? or replace with jdbc transaction manager?
+
+    -->
    <transaction-factory class="org.ofbiz.core.entity.transaction.DumbFactory">
         <user-transaction-jndi jndi-server-name="test" jndi-name="java:comp/UserTransaction"/>
         <transaction-manager-jndi jndi-server-name="test" jndi-name="java:comp/UserTransaction"/>
