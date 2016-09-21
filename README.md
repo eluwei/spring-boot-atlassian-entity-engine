@@ -2,6 +2,7 @@ a show case to integrate
 "atlassian entity engine(ofbiz entity engine)" with spring boot.
 
 
+
 前置条件：
  假设需要跑的war、jar包已经ready，并且在某个地方可用。
  本例假设spring boot的包已经deploy到maven私服。
@@ -13,7 +14,7 @@ http://10.71.161.109:8081/repository/maven-snapshots/com/pactera/pds/entity-engi
  docker run --name demo-mysql -e MYSQL_ROOT_PASSWORD=Admin123 -e MYSQL_DATABASE=entity_engine -e MYSQL_USER=entity_engine -e MYSQL_PASSWORD=entity_engine -d mysql:5.6
  
  2.编译镜像，并push到docker私库
- docker build ./ 10.71.161.109:5555/demo_entity_engine
+ docker build . -t 10.71.161.109:5555/demo_entity_engine
  docker push 10.71.161.109:5555/demo_entity_engine
  
  3.需要启动的机器上拉取镜像
@@ -21,3 +22,6 @@ http://10.71.161.109:8081/repository/maven-snapshots/com/pactera/pds/entity-engi
  
  4.启动
  docker run -p 8080:8080 --name demo_entity_engine --link demo-mysql:mysql_db -d 10.71.161.109:5555/demo_entity_engine
+ 
+ 
+ 镜像也可以在maven下生成，例子：https://github.com/jiwhiz/spring-boot-docker-mysql
