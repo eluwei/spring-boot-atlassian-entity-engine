@@ -52,7 +52,7 @@ For detailed configuration help see:
                 table-type="InnoDB">
 <!--jdbc-driver="com.mysql.jdbc.jdbc2.optional.MysqlXADataSource"-->
         <inline-jdbc jdbc-driver="com.mysql.jdbc.Driver"
-                     jdbc-uri="jdbc:mysql://127.0.0.1:3306/entity_engine"
+                     jdbc-uri="jdbc:mysql://mysql_db/entity_engine"
                      jdbc-username="root"
                      jdbc-password="Admin123"
                      isolation-level="ReadCommitted"
@@ -72,7 +72,7 @@ For detailed configuration help see:
                 table-type="InnoDB">
         <!--jdbc-driver="com.mysql.jdbc.jdbc2.optional.MysqlXADataSource"-->
         <inline-jdbc jdbc-driver="com.mysql.jdbc.Driver"
-                     jdbc-uri="jdbc:mysql://127.0.0.1:3306/entity_engine"
+                     jdbc-uri="jdbc:mysql://mysql_db/entity_engine"
                      jdbc-username="root"
                      jdbc-password="Admin123"
                      isolation-level="ReadCommitted"
