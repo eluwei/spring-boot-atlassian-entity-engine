@@ -8,6 +8,7 @@
     <artifactId>boot-entity-engine-parent</artifactId>
     <version>1.0-SNAPSHOT</version>
     <modules>
+        <module>boot-entity-engine-service</module>
         <module>boot-entity-engine-api</module>
     </modules>
     <packaging>pom</packaging>
@@ -25,6 +26,11 @@
         <jotm.version>2.0.10</jotm.version>
     </properties>
     <repositories>
+        <repository>
+            <id>local_nexus3</id>
+            <name>nexus3 local repository</name>
+            <url>http://10.71.161.109:8081/repository/maven-public/</url>
+        </repository>
         <repository>
             <id>atlassian_ci</id>
             <name>atlassian_ci</name>
@@ -164,11 +170,11 @@
             <groupId>javax.transaction</groupId>
             <artifactId>jta</artifactId>
         </dependency>
-        <dependency>
+<!--        <dependency>
             <groupId>commons-collections</groupId>
             <artifactId>commons-collections</artifactId>
-            <scope>1.9</scope>
-        </dependency>
+            <version>1.9</version>
+        </dependency>-->
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-dbcp2</artifactId>
@@ -205,17 +211,17 @@
     </build>
 
     <distributionManagement>
-        <!-- publish releases and snapshots private nexus repository.
+        <!-- publish releases and snapshots private nexus repository. -->
         <repository>
             <id>releases</id>
             <name>Releases</name>
-            <url>http://IP/nexus/content/repositories/releases/</url>
+            <url>http://10.71.161.109:8081/repository/maven-release/</url>
         </repository>
         <snapshotRepository>
             <id>snapshots</id>
             <name>Snapshots</name>
-            <url>http://IP/nexus/content/repositories/snapshots/</url>
+            <url>http://10.71.161.109:8081/repository/maven-snapshots/</url>
         </snapshotRepository>
-        -->
+
     </distributionManagement>
 </project>
