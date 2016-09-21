@@ -11,7 +11,7 @@ http://10.71.161.109:8081/repository/maven-snapshots/com/pactera/pds/entity-engi
 
  启动顺序：
  1.启动mysql (如果要开放端口使用-p 3306:3306)
- docker run --name demo-mysql -e MYSQL_ROOT_PASSWORD=Admin123 -e MYSQL_DATABASE=entity_engine -e MYSQL_USER=entity_engine -e MYSQL_PASSWORD=entity_engine -d mysql:5.6
+ docker run -p 3306:3306 --name demo-mysql -e MYSQL_ROOT_PASSWORD=Admin123 -e MYSQL_DATABASE=entity_engine -e MYSQL_USER=entity_engine -e MYSQL_PASSWORD=entity_engine -d mysql:5.6
  
  2.编译镜像，并push到docker私库
  docker build . -t 10.71.161.109:5555/demo_entity_engine
