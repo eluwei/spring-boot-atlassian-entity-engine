@@ -22,5 +22,12 @@ http://10.71.161.109:8081/repository/maven-snapshots/com/pactera/pds/entity-engi
  4.启动
  docker run -p 8080:8080 --name demo_entity_engine --link demo-mysql:mysql_db -d 10.71.161.109:5000/demo_entity_engine
  
+ 5.访问：
+ http://10.71.161.109:8080/projects
+ 
+ 6.连接数据，对project表添加数据
+ 在次访问
+ http://10.71.161.109:8080/projects
+ 
  
  镜像也可以在maven下生成，例子：https://github.com/jiwhiz/spring-boot-docker-mysql
