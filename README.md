@@ -6,8 +6,8 @@ a show case to integrate
  假设需要跑的war、jar包已经ready，并且在某个地方可用。
  本例假设spring boot的包已经deploy到maven私服。
  地址:
- http://10.71.161.109:8081/repository/maven-public/com/pactera/pds/entity-engine/boot-entity-engine-api/1.0-SNAPSHOT/boot-entity-engine-api-1.0-20160921.023248-1.jar
- 
+http://10.71.161.109:8081/repository/maven-snapshots/com/pactera/pds/entity-engine/boot-entity-engine-api/1.0-SNAPSHOT/boot-entity-engine-api-1.0-20160921.070541-1.jar
+
  启动顺序：
  1.启动mysql (如果要开放端口使用-p 3306:3306)
  docker run --name demo-mysql -e MYSQL_ROOT_PASSWORD=Admin123 -e MYSQL_DATABASE=entity_engine -e MYSQL_USER=entity_engine -e MYSQL_PASSWORD=entity_engine -d mysql:5.6
