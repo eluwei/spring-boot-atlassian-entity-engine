@@ -31,3 +31,6 @@ http://10.71.161.109:8081/repository/maven-snapshots/com/pactera/pds/entity-engi
  
  
  镜像也可以在maven下生成，例子：https://github.com/jiwhiz/spring-boot-docker-mysql
+ 
+ atlassian ofbiz entity-engine 项目地址：
+ https://bitbucket.org/atlassian/entity-engine/overview
