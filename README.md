@@ -2,7 +2,7 @@ a show case to integrate
 "atlassian entity engine(ofbiz entity engine)" with spring boot.
 
 
-
+  
 前置条件：
  假设需要跑的war、jar包已经ready，并且在某个地方可用。
  本例假设spring boot的包已经deploy到maven私服。
@@ -30,7 +30,7 @@ http://10.71.161.109:8081/repository/maven-snapshots/com/pactera/pds/entity-engi
  http://10.71.161.109:8080/projects
  
  
- 镜像也可以在maven下生成，例子：https://github.com/jiwhiz/spring-boot-docker-mysql
+ 镜像也可以在maven下生成， 例子：https://github.com/jiwhiz/spring-boot-docker-mysql
  
  atlassian ofbiz entity-engine 项目地址：
  https://bitbucket.org/atlassian/entity-engine/overview
