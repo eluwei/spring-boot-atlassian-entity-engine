@@ -19,6 +19,8 @@ http://10.71.161.109:8081/repository/maven-snapshots/com/pactera/pds/entity-engi
  3.需要启动的机器上拉取镜像
  docker pull 10.71.161.109:5000/demo_entity_engine
  
+ 
+ 
  4.启动
  docker run -p 8080:8080 --name demo_entity_engine --link demo-mysql:mysql_db -d 10.71.161.109:5000/demo_entity_engine
  
