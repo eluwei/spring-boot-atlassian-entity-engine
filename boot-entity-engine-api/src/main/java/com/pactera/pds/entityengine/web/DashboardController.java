@@ -19,18 +19,18 @@ import java.util.Map;
  * Time: 18:23
  */
 @RestController
-public class DarshboardController {
+public class DashboardController {
     @Autowired
-    DelegatorInterface delegator;
+    private DelegatorInterface delegator;
 
     @RequestMapping("/projects")
-    public Object Projects() throws GenericEntityException {
+    public Object projects() throws GenericEntityException {
         List<GenericValue> projects = delegator.findAll("Project");
         return ProjectDto.transform(projects);
     }
     //test roll back!
     @RequestMapping("/trans")
-    public Object Trans() throws GenericEntityException {
+    public Object trans() throws GenericEntityException {
         try{
             Map obj=new HashMap<>();
             obj.put("id",1);

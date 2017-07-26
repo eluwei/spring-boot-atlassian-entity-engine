@@ -15,15 +15,15 @@ import java.util.List;
  */
 @Data
 public class ProjectDto {
-    String id;
-    String key;
-    String counter;
+    private String id;
+    private String key;
+    private String counter;
 
     public static ProjectDto transform(GenericEntity entity) {
         ProjectDto rs = new ProjectDto();
-        rs.id =  entity.get("id") +"";
+        rs.id = entity.get("id") + "";
         rs.key = (String) entity.get("key");
-        rs.counter = entity.get("counter")+"";
+        rs.counter = entity.get("counter") + "";
         return rs;
     }
 
